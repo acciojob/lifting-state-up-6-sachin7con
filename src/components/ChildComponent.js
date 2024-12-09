@@ -1,26 +1,23 @@
 //SGN
-import React, {useState} from "react";
+import React from "react";
+
+
+
 
 const ChildComponent = ({todos, onComplete}) => {
   
-const handleCompteted = (id) => {
-    onComplete(id);
-}    
-
-  return (
+  return(
     <div>
-        {/*ONS Do not remove the main div */}
-        <h3>Child Component</h3>
-        <ul>
-        {todos.map((todo) => (
-            
-            <li key={todo.id}>{todo.text} { !todo.completed && (<button onClick={() => handleCompteted(todo.id)}>Complete</button>)} </li>
-
-            
-        ))}
-        </ul>
+      <h2>Child Component</h2>
+      <ul>
+      {todos.map((task) => (
+            <li key={task.id}>{task.text}  
+            {!task.completed && (<button style={{display: 'inline-block'}} onClick={() => onComplete(task.id)}>Complete</button>)}
+            </li>            
+          ))}
+      </ul>
     </div>
   )
 }
 
-export default ChildComponent
+export default ChildComponent;
