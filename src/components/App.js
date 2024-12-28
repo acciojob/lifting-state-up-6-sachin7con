@@ -1,5 +1,5 @@
 //SGN, JSP, JSLN, JSRK, JSSR, JBB, JMD, JSM, JSVM
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import ChildComponent from "./ChildComponent";
 
 const App = () => {
@@ -16,9 +16,12 @@ const handleComplete = (id) => {
     prev.map(task => task.id === id ? {...task, completed: true} : task)  
   );
   
-  setTimeout(() => console.log("Updated Todos:", todos), 0);
+  
 }
 
+useEffect(() => {
+  console.log("Updated Todos:", todos);
+}, [todos]);
 
 
   return(
