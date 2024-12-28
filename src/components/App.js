@@ -16,7 +16,7 @@ const handleComplete = (id) => {
     prev.map(task => task.id === id ? {...task, completed: true} : task)  
   );
   
-  console.log("Updated Todos:", todos);
+  setTimeout(() => console.log("Updated Todos:", todos), 0);
 }
 
 

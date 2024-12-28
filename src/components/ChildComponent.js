@@ -12,7 +12,8 @@ const ChildComponent = ({todos, onComplete}) => {
       <ul>
       {todos.map((task) => (
             <li key={task.id}>{task.text}  
-            {!task.completed && (<button onClick={() => onComplete(task.id)}>Complete</button>)}
+            {!task.completed && (
+              <button onClick={() => onComplete(task.id)}>Complete</button>)}
             </li>            
           ))}
       </ul>
