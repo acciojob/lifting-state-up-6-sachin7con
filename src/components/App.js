@@ -1,4 +1,4 @@
-//SGN
+//SGN, JSP, JSLN, JSRK, JSSR, JBB, JMD, JSM, JSVM
 import React, {useState} from "react";
 import ChildComponent from "./ChildComponent";
 
@@ -14,6 +14,7 @@ const handleComplete = (id) => {
   setTodos((prev) => 
     prev.map(task => task.id === id ? {...task, completed: true} : task)  
   );
+  
   
 }
 
