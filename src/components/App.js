@@ -11,11 +11,12 @@ const[todos, setTodos] = useState([
 
 
 const handleComplete = (id) => {
+  
   setTodos((prev) => 
     prev.map(task => task.id === id ? {...task, completed: true} : task)  
   );
   
-  
+  console.log("Updated Todos:", todos);
 }
 
 
